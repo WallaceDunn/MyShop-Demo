@@ -23,7 +23,7 @@
                     android:layout_gravity="center"
                     android:drawableTop="@drawable/ic_order_wait_pay"
                     android:padding="4dp"
-                    android:text="待付款"
+                    android:text="我的订单"
                     android:textSize="14sp"
                     />
             </FrameLayout>
@@ -69,7 +69,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:drawableTop="@drawable/ic_order_wait_pay"
+                    android:drawableTop="@drawable/ic_build_black_24dp"
                     android:padding="4dp"
                     android:text="退货/售后"
                     android:textSize="14sp"
