@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
-        <include layout="@layout/fragment_mine_top"/>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <include layout="@layout/fragment_mine_top"/>
+            <include layout="@layout/fragment_mine_top_login"
+                android:visibility="invisible"/>
+        </FrameLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@color/colorWhite">
             <FrameLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -79,7 +90,10 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorWhite">
             <FrameLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -112,7 +126,38 @@
                     android:textSize="14sp"
                     />
             </FrameLayout>
-
+            <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:id="@+id/text_goods_atte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableTop="@drawable/ic_order_wait_pay"
+                android:padding="4dp"
+                android:text="商品关注"
+                android:textSize="14sp"
+                />
+        </FrameLayout>
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+                <TextView
+                    android:id="@+id/text_shop_atte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableTop="@drawable/ic_order_wait_pay"
+                    android:padding="4dp"
+                    android:text="店铺关注"
+                    android:textSize="14sp"
+                    />
+            </FrameLayout>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
