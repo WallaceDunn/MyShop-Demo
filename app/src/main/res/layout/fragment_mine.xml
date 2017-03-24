@@ -168,12 +168,13 @@
         </LinearLayout>
 
         <RelativeLayout
+            android:id="@+id/fragment_mine_goodsload"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@color/colorWhite">
             <TextView
-                android:id="@+id/fragment_mine_goodsload"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
