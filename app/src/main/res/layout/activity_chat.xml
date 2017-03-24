@@ -34,7 +34,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_below="@+id/et_receiver_chat"
-            />
+            android:layout_toStartOf="@+id/btn_send_chat" />
         <Button
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"

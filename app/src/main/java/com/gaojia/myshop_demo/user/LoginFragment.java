@@ -13,12 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import com.gaojia.myshop_demo.MainActivity;
 import com.gaojia.myshop_demo.R;
-import com.hyphenate.EMCallBack;
-import com.hyphenate.chat.EMClient;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -95,33 +90,12 @@ public class LoginFragment extends Fragment {
                 if(TextUtils.isEmpty(uname)|| TextUtils.isEmpty(upwd)){
                     Toast.makeText(getContext(),"请输入正确用户名和密码",Toast.LENGTH_SHORT).show();
                 }else{
-
-                    EMClient.getInstance().login(name.getText().toString(),
-                            pwd.getText().toString(),
-                            new EMCallBack() {
-                                @Override
-                                public void onSuccess() {
-                                    //登录成功
-                                    startActivity(new Intent(getContext(),ChatActivity.class));
-
-                                }
-
-                                @Override
-                                public void onError(int i, String s) {
-                                    //登录失败
-                                }
-
-                                @Override
-                                public void onProgress(int i, String s) {
-                                    //登录进度更新
-                                }
-                            });
-//                    new Thread(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            UserManager.login(uname,upwd,handler);
-//                        }
-//                    }).start();
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            UserManager.login(uname,upwd,handler);
+                        }
+                    }).start();
                 }
                 break;
             case R.id.fragment_login_signup_bt:
