@@ -9,6 +9,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
+        //登录注册/个人信息
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -16,7 +17,7 @@
             <include layout="@layout/fragment_mine_top_login"
                 android:visibility="invisible"/>
         </FrameLayout>
-
+        //我的订单/店铺关注/待评价/在线客服
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,13 +29,13 @@
                 android:layout_weight="1"
                 >
                 <TextView
-                    android:id="@+id/text_wait_pay"
+                    android:id="@+id/text_goods_atte"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:drawableTop="@drawable/ic_order_wait_pay"
                     android:padding="4dp"
-                    android:text="我的订单"
+                    android:text="商品关注"
                     android:textSize="14sp"
                     />
             </FrameLayout>
@@ -44,13 +45,13 @@
                 android:layout_weight="1"
                 >
                 <TextView
-                    android:id="@+id/text_wait_ship"
+                    android:id="@+id/text_shop_atte"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:drawableTop="@drawable/ic_order_wait_ship"
+                    android:drawableTop="@drawable/ic_order_wait_pay"
                     android:padding="4dp"
-                    android:text="待收货"
+                    android:text="店主关注"
                     android:textSize="14sp"
                     />
             </FrameLayout>
@@ -76,24 +77,75 @@
                 android:layout_weight="1"
                 >
                 <TextView
-                    android:id="@+id/text_after"
+                    android:id="@+id/text_service"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:drawableTop="@drawable/ic_build_black_24dp"
+                    android:drawableTop="@drawable/ic_order_wait_pay"
                     android:padding="4dp"
-                    android:text="退货/售后"
+                    android:text="在线客服"
                     android:textSize="14sp"
                     />
             </FrameLayout>
 
+
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
             android:layout_marginTop="10dp"
             android:background="@color/colorWhite">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="233333.33"
+                    android:textSize="18sp"/>
+                <TextView
+                android:id="@+id/text_goldbalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:text="金币余额"
+                android:textSize="12sp"
+                />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="233333.33"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/text_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="4dp"
+                    android:text="钱包余额"
+                    android:textSize="12sp"
+                    />
+
+
+            </LinearLayout>
             <FrameLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -105,59 +157,49 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:drawableTop="@drawable/ic_order_wait_pay"
+
                     android:padding="4dp"
                     android:text="钱包"
                     android:textSize="14sp"
                     />
             </FrameLayout>
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                >
-                <TextView
-                    android:id="@+id/text_service"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:drawableTop="@drawable/ic_order_wait_pay"
-                    android:padding="4dp"
-                    android:text="在线客服"
-                    android:textSize="14sp"
-                    />
-            </FrameLayout>
-            <FrameLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            >
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorWhite">
             <TextView
-                android:id="@+id/text_goods_atte"
+                android:id="@+id/fragment_mine_goodsload"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:drawableTop="@drawable/ic_order_wait_pay"
-                android:padding="4dp"
-                android:text="商品关注"
-                android:textSize="14sp"
-                />
-        </FrameLayout>
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                >
-                <TextView
-                    android:id="@+id/text_shop_atte"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:drawableTop="@drawable/ic_order_wait_pay"
-                    android:padding="4dp"
-                    android:text="店铺关注"
-                    android:textSize="14sp"
-                    />
-            </FrameLayout>
-        </LinearLayout>
+                android:layout_centerVertical="true"
+                android:text="上传商品"
+                android:textSize="24sp"
+                android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+                android:layout_margin="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorWhite">
+            <TextView
+                android:id="@+id/fragment_mine_mygoodsload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="我的商品"
+                android:textSize="24sp"
+                android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+                android:layout_margin="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"/>
+        </RelativeLayout>
     </LinearLayout>
 </ScrollView>

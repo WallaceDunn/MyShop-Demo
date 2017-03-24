@@ -22,10 +22,10 @@ import butterknife.OnClick;
 public class MineFragment extends Fragment{
     @BindView(R.id.text_service)
     TextView service_tv;
-    @Nullable
     public static MineFragment newInstance(){
         return new MineFragment();
     }
+    @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view  = inflater.inflate(R.layout.fragment_mine,container,false);
